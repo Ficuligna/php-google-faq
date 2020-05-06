@@ -3,6 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Faq my Butt</title>
+    <style media="screen">
+      body{
+        padding: 20px;
+      }
+      header{
+        height: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 28px;
+        display: flex;
+        background-color: white;
+        align-items: center;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+      }
+      header h2{
+        color: #3c4043;
+        font-family: 'Google Sans',sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+      }
+      img{
+        height: 30px;
+        margin: 0 20px;
+      }
+
+      main h2{
+        color: #3c4043;
+        font-family: 'Google Sans',sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+        padding: 64px 0 0 0;
+      }
+      p{
+        letter-spacing: .2px;
+        line-height: 24px;
+        padding-top: 20px;
+        color: rgba(0,0,0,0.87);
+        font-family: Roboto,arial,sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.54;
+      }
+
+    </style>
 
     <?php
 
@@ -36,12 +87,19 @@
 
   </head>
   <body>
-    <?php
+    <header>
+      <button type="button" name="button">Mutendina</button>
+      <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt="">
+      <h2>Domande frequenti</h2>
+    </header>
+    <main>
+      <?php
       foreach ($argomenti as $argomento) {
         echo "<h2>" . $argomento['domanda'] . "</h2>"
-          ."<p>" . $argomento['risposta'] . "</p>";
+        ."<p>" . $argomento['risposta'] . "</p>";
       }
-    ?>
+      ?>
+    </main>
   </body>
 </html>
 
